@@ -829,7 +829,9 @@ footer{
         padding: 0;
         text-align: center;
     }
-
+    .about-text h2, .about-text p{
+        margin: 20px auto;
+    }
     .about-image img {
         display: none;
     }
