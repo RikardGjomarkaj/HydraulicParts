@@ -132,7 +132,7 @@
     <h2>Our Services</h2>
     <div class="service-cards">
       <div class="product-card card4">
-        <h3>Lubricants</h3>
+        <h3>Lubrificants</h3>
         <!-- <p>High-quality parts for your excavators to ensure maximum performance.</p> -->
         <button class="cta-button" onclick="scrollToDiv()">Request a Quote</button>
       </div>
@@ -159,13 +159,14 @@
   <section id="contact" class="contact" action="/send" method="POST">
     <div class="form">
       <h2>Contact Us</h2>  
-      <form id="contactForm" action="/send" method="POST">
-    <input type="text" id="name" name="name" placeholder="Your Name (not required)"><br>
-    <input type="email" id="email" name="email" placeholder="Your Email" required><br>
-    <textarea name="message" placeholder="Your Message" required></textarea><br>
-    <button type="submit">Send Message</button>
-    <p id="submitResult"></p>
-</form>
+      <form id="contactForm">
+        <input type="text" id="name" name="name" placeholder="Your Name (not required)"><br>
+        <input type="email" id="email" name="email" placeholder="Your Email" required><br>
+        <textarea name="message" placeholder="Your Message" required></textarea><br>
+        <button type="submit">Send Message</button>
+        <p id="submit"></p>
+    </form>
+    <p id="statusMessage"></p>
     </div>
     <div id="map">
       <h2>Find Us</h2> 
