@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydraulic Parts Business</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Navbar Section -->
+    
+    <div id="navbar" class="navbar">
+        <div class="logo" alt="logo">
+            <a href="./index.html">
+                <img id="logo" src="logo.png" alt="Logo">
+            </a>
+        </div>
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger-menu" id="hamburgerMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div>
+          <nav id="nav" class="nav">
+            <ul>
+                <li class="navItem"><a href="#home">Home</a></li>
+                <li class="navItem"><a href="#stats">About</a></li>
+                <li class="navItem"><a href="#products">Products</a></li>
+                <li class="navItem"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Header Section -->
+    <header id="home">
+        <div class="mainContent">
+            <h1 id="mainText">Quality Parts<br>  <span id="span1">Trusted</span> Service</h1>
+            <p id="description">Engineering Your Dreams with High-Quality Hydraulic Parts</p>
+            <div class="buttons">
+                <a href="#products">Order Products</a>
+            </div>
+        </div>
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="background-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+             </video>
+             <img src="./images/poster.jpg" alt="Fallback Image" class="fallback-image">
+            <div class="overlay"></div>
+            <div class="overlay1"></div>
+        </div>
+        <a href="#stats" id="scrollDown"> 
+             <div class="arrow"></div> <br> 
+             </a>
+    </header>
+   
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats">
+        <div class="stat">
+            <h2 id="stat1">20</h2>
+            <p>Years in business</p>
+        </div>
+        <div class="stat">
+            <h2 id="stat2">300</h2>
+            <p>Happy Clients</p>
+        </div>
+        <div class="stat">
+            <h2 id="stat3">1,000</h2>
+            <p>Different Products</p>
+        </div>
+        <div class="stat">
+            <h2 id="stat4">10</h2>
+            <p>Partners</p>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-me">
+        <div class="about-image">
+            <img src="images/about-me1.jpg" alt="About Me">
+            <div id="about_me_overlay"></div>
+          </div>
+          
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>
+            We specialize in providing reliable, durable, and cost-effective hydraulic parts for construction machinery, 
+            including excavators, baggers, and trucks. With years of experience in the industry, 
+            we understand the importance of having the right parts to keep your equipment running smoothly and efficiently.
+          </p>
+          <h2>Our Mission</h2>
+          <p>
+            Our Mission
+            Our mission is to offer premium hydraulic components that meet the highest standards of quality and performance.
+             We aim to provide exceptional customer service, ensuring that each of our clients receives the right solutions 
+             tailored to their specific needs.
+          </p>
+        </div>
+        
+      </section>
+
+
+  <!-- Products Section -->
+  <section id="products" class="products">
+    <h2>Our Products</h2>
+    <div class="product-cards">
+      <div class="product-card card1">
+        <h3>Excavator Parts</h3>
+        <!-- <p>High-quality parts for your excavators to ensure maximum performance.</p> -->
+        <button class="cta-button" onclick="scrollToDiv()">Request a Quote</button>
+      </div>
+      <div class="product-card card2">
+        <h3>Backhoe Parts</h3>
+        <!-- <p>Durable and reliable parts for your trucks and heavy machinery.</p> -->
+        <button class="cta-button" onclick="scrollToDiv()">Request a Quote</button>
+      </div>
+      <div class="product-card card3">
+        <h3>Truck Parts</h3>
+        <!-- <p>Reliable parts to maintain the efficiency of your bagger.</p> -->
+        <button class="cta-button" onclick="scrollToDiv()">Request a Quote</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="product-card card4">
+        <h3>Lubricants</h3>
+        <!-- <p>High-quality parts for your excavators to ensure maximum performance.</p> -->
+        <button class="cta-button" onclick="scrollToDiv()">Request a Quote</button>
+      </div>
+      <div class="product-card card5">
+        <h3>Hydraulic hose</h3>
+        <!-- <p>Durable and reliable parts for your trucks and heavy machinery.</p> -->
+        <button class="cta-button" onclick="scrollToDiv()" >Request a Quote</button>
+      </div>
+      <div class="product-card card6">
+        <h3>Steel Cable</h3>
+        <!-- <p>Reliable parts to maintain the efficiency of your bagger.</p> -->
+        <button class="cta-button" onclick="scrollToDiv()">Request a Quote</button>
+      </div>
+    </div>
+  </section>
+
+    <!-- Why Choose Us Section -->
+    <!-- <section class="why-choose">
+        <h2>Why Choose Us</h2>
+        <p>Our expertise, reliability, and dedication to excellence make us the preferred choice for all your hydraulic part needs.</p>
+    </section> -->
+    
+    <!--Contact form-->
+  <section id="contact" class="contact" action="/send" method="POST">
+    <div class="form">
+      <h2>Contact Us</h2>  
+      <form id="contactForm" action="/send" method="POST">
+    <input type="text" id="name" name="name" placeholder="Your Name (not required)"><br>
+    <input type="email" id="email" name="email" placeholder="Your Email" required><br>
+    <textarea name="message" placeholder="Your Message" required></textarea><br>
+    <button type="submit">Send Message</button>
+    <p id="submitResult"></p>
+</form>
+    </div>
+    <div id="map">
+      <h2>Find Us</h2> 
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5927.2985063334545!2d19.509721084130874!3d42.02925621266073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134e017c9951c35b%3A0x3c094f306292ceeb!2sPjes%C3%AB%20p%C3%ABr%20Fadroma%20dhe%20Ekskavator%20-%20Tuba%20industriale%2C%20Tuba%20Hidraulike!5e0!3m2!1sen!2s!4v1737139346041!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Hydraulic Parts Business. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
