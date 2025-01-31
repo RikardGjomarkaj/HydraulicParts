@@ -135,3 +135,101 @@ document.addEventListener('click', (e) => {
       }
   });
 });
+
+
+// Switch language
+const translations = {
+  "en": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "contact": "Contact",
+    "quality_parts": "Quality Parts",
+    "trusted_service": "Trusted Service",
+    "engineering_dreams": "Engineering Your Dreams with High-Quality Hydraulic Parts",
+    "our_products": "Our Products",
+    "years_in_business": "20",
+    "years_in_business_label": "Years in business",
+    "happy_clients": "300",
+    "happy_clients_label": "Happy Clients",
+    "different_products": "1,000",
+    "different_products_label": "Different Products",
+    "partners": "10",
+    "partners_label": "Partners",
+    "about_us": "About Us",
+    "about_us_description": "We specialize in providing reliable, durable, and cost-effective hydraulic parts for construction machinery, including excavators, backhoes, and trucks. With years of experience in the industry, we understand the importance of having the right parts to keep your equipment running smoothly and efficiently.",
+    "our_mission": "Our Mission",
+    "our_mission_description": "Our mission is to offer premium hydraulic components that meet the highest standards of quality and performance. We aim to provide exceptional customer service, ensuring that each of our clients receives the right solutions tailored to their specific needs.",
+    "our_products_title": "Our Products",
+    "excavator_parts": "Excavator Parts",
+    "backhoe_parts": "Backhoe Parts",
+    "truck_parts": "Truck Parts",
+    "request_quote": "Request a Quote",
+    "our_services_title": "Our Services",
+    "lubricants": "Lubricants",
+    "hydraulic_hose": "Hydraulic Hose",
+    "steel_cable": "Steel Cable",
+    "contact_us": "Contact Us",
+    "your_name": "Your Name (not required)",
+    "your_email": "Your Email",
+    "your_message": "Your Message",
+    "send_message": "Send Message",
+    "footer_text": "&copy; 2025 Hydraulic Parts Business. All rights reserved."
+  },
+  "al": {
+    "home": "Kryefaqja",
+    "about": "Rreth Nesh",
+    "products": "Produktet",
+    "contact": "Kontakt",
+    "quality_parts": "Pjesë Cilësore",
+    "trusted_service": "Shërbim i Besuar",
+    "engineering_dreams": "Dizenjojmë Ëndrrat Tuaja me Pjesë Hidraulike të Cilësisë së Lartë",
+    "our_products": "Produktet Tonë",
+    "years_in_business": "20",
+    "years_in_business_label": "Vite në biznes",
+    "happy_clients": "300",
+    "happy_clients_label": "Klientë të Kënaqur",
+    "different_products": "1,000",
+    "different_products_label": "Produkte të Ndryshme",
+    "partners": "10",
+    "partners_label": "Partnerë",
+    "about_us": "Rreth Nesh",
+    "about_us_description": "Ne specializohemi në ofrimin e pjesëve hidraulike të besueshme, të qëndrueshme dhe të përballueshme për makineritë e ndërtimit, përfshirë ekskavatorë, bagra dhe kamionë. Me vite përvoje në industri, kuptojmë rëndësinë e pasjes së pjesëve të duhura për të mbajtur pajisjet tuaja të funksionojnë në mënyrë të qetë dhe efikase.",
+    "our_mission": "Misioni Ynë",
+    "our_mission_description": "Misioni ynë është të ofrojmë komponente hidraulike premium që plotësojnë standardet më të larta të cilësisë dhe performancës. Ne synojmë të ofrojmë shërbim të jashtëzakonshëm për klientët, duke siguruar që secili prej klientëve tanë të marrë zgjidhjet e duhura që përshtaten me nevojat e tyre specifike.",
+    "our_products_title": "Produktet Tonë",
+    "excavator_parts": "Pjesë Ekskavatori",
+    "backhoe_parts": "Pjesë Bagroje",
+    "truck_parts": "Pjesë Kamioni",
+    "request_quote": "Kërkoni Një Ofertë",
+    "our_services_title": "Shërbimet Tonë",
+    "lubricants": "Lubrifikantë",
+    "hydraulic_hose": "Hose Hidraulike",
+    "steel_cable": "Tel Çeliku",
+    "contact_us": "Na Kontaktoni",
+    "your_name": "Emri Juaj (nuk është i kërkuar)",
+    "your_email": "Email-i Juaj",
+    "your_message": "Mesazhi Juaj",
+    "send_message": "Dërgo Mesazhin",
+    "footer_text": "&copy; 2025 Pjesë Hidraulike. Të Drejtat e Rezervuara."
+  }
+};
+
+// Function to change language
+document.getElementById('languageSelect').addEventListener('change', (event) => {
+  switchLanguage(event.target.value);
+});
+
+// Switch language function
+function switchLanguage(language) {
+  // Get all elements with data-translate attribute
+  const elements = document.querySelectorAll('[data-translate]');
+  
+  // Iterate through each element and update text content
+  elements.forEach((element) => {
+    const key = element.getAttribute('data-translate');
+    if (translations[language] && translations[language][key]) {
+      element.textContent = translations[language][key];
+    }
+  });
+}

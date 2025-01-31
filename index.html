@@ -6,7 +6,7 @@
     <title>Hydraulic Parts Business</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./public/styles.css" onerror="this.onerror=null;this.href='/styles.css';">
-    <link rel="icon" type="image/x-icon" href="./publci/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./public/favicon.ico">
 </head>
 <body>
     <!-- Navbar Section -->
@@ -17,7 +17,7 @@
             </a>
         </div>
         <!-- Hamburger Menu Icon -->
-        <div class="hamburger-menu" id="hamburgerMenu">
+        <div class="hamburger-menu" id="hamburgerMenu" aria-label="Menu">
           <span></span>
           <span></span>
           <span></span>
@@ -25,10 +25,16 @@
         <div>
           <nav id="nav" class="nav">
             <ul>
-                <li class="navItem"><a href="#home">Home</a></li>
-                <li class="navItem"><a href="#stats">About</a></li>
-                <li class="navItem"><a href="#products">Products</a></li>
-                <li class="navItem"><a href="#contact">Contact</a></li>
+                <li class="navItem"><a href="#home" data-translate="home">Home</a></li>
+                <li class="navItem"><a href="#stats" data-translate="about">About</a></li>
+                <li class="navItem"><a href="#products" data-translate="products">Products</a></li>
+                <li class="navItem"><a href="#contact" data-translate="contact">Contact</a></li>
+                <div id="languageSwitcher">
+                  <select id="languageSelect">
+                    <option value="en">English</option>
+                    <option value="al">Shqip</option>
+                  </select>
+                </div>
             </ul>
         </nav>
       </div>
@@ -37,10 +43,10 @@
     <!-- Header Section -->
     <header id="home">
         <div class="mainContent">
-            <h1 id="mainText">Quality Parts<br>  <span id="span1">Trusted</span> Service</h1>
-            <p id="description">Engineering Your Dreams with High-Quality Hydraulic Parts</p>
+            <h1 id="mainText" data-translate="quality_parts">Quality Parts<br>  <span id="span1" data-translate="trusted_service">Trusted</span> Service</h1>
+            <p id="description" data-translate="engineering_dreams">Engineering Your Dreams with High-Quality Hydraulic Parts</p>
             <div class="buttons">
-                <a href="#products">Order Products</a>
+                <a href="#products" data-translate="our_products">Our Products</a>
             </div>
         </div>
         <div class="video-container">
@@ -52,7 +58,7 @@
             <div class="overlay"></div>
             <div class="overlay1"></div>
         </div>
-        <a href="#stats" id="scrollDown"> 
+        <a href="#stats" id="scrollDown" > 
              <div class="arrow"></div> <br> 
              </a>
     </header>
@@ -60,20 +66,20 @@
     <!-- Stats Section -->
     <section id="stats" class="stats">
         <div class="stat">
-            <h2 id="stat1">20</h2>
-            <p>Years in business</p>
+            <h2 id="stat1" data-translate="years_in_business">20</h2>
+            <p data-translate="years_in_business_label">Years in business</p>
         </div>
         <div class="stat">
-            <h2 id="stat2">300</h2>
-            <p>Happy Clients</p>
+            <h2 id="stat2" data-translate="happy_clients">300</h2>
+            <p data-translate="happy_clients_label">Happy Clients</p>
         </div>
         <div class="stat">
-            <h2 id="stat3">1,000</h2>
-            <p>Different Products</p>
+            <h2 id="stat3" data-translate="different_products">1,000</h2>
+            <p data-translate="different_products_label">Different Products</p>
         </div>
         <div class="stat">
-            <h2 id="stat4">10</h2>
-            <p>Partners</p>
+            <h2 id="stat4" data-translate="partners">10</h2>
+            <p data-translate="partners_label">Partners</p>
         </div>
     </section>
 
@@ -84,15 +90,14 @@
             <div id="about_me_overlay"></div>
           </div>
         <div class="about-text">
-          <h2>About Us</h2>
-          <p>
+          <h2 data-translate="about_us">About Us</h2>
+          <p data-translate="about_us_description">
             We specialize in providing reliable, durable, and cost-effective hydraulic parts for construction machinery, 
             including excavators, baggers, and trucks. With years of experience in the industry, 
             we understand the importance of having the right parts to keep your equipment running smoothly and efficiently.
           </p>
-          <h2>Our Mission</h2>
-          <p>
-            Our Mission
+          <h2 data-translate="our_mission">Our Mission</h2>
+          <p data-translate="our_mission_description">
             Our mission is to offer premium hydraulic components that meet the highest standards of quality and performance.
              We aim to provide exceptional customer service, ensuring that each of our clients receives the right solutions 
              tailored to their specific needs.
@@ -103,76 +108,64 @@
 
   <!-- Products Section -->
   <section id="products" class="products">
-    <h2>Our Products</h2>
+    <h2 data-translate="our_products_title">Our Products</h2>
     <div class="product-cards">
       <div class="product-card card1">
-        <h3>Excavator Parts</h3>
-        <!-- <p>High-quality parts for your excavators to ensure maximum performance.</p> -->
-        <button class="cta-button" onclick="scrollToDiv()">Request a Quote</button>
+        <h3 data-translate="excavator_parts">Excavator Parts</h3>
+        <button class="cta-button" onclick="scrollToDiv()" data-translate="request_quote">Request a Quote</button>
       </div>
       <div class="product-card card2">
-        <h3>Backhoe Parts</h3>
-        <!-- <p>Durable and reliable parts for your trucks and heavy machinery.</p> -->
-        <button class="cta-button" onclick="scrollToDiv()">Request a Quote</button>
+        <h3 data-translate="backhoe_parts">Backhoe Parts</h3>
+        <button class="cta-button" onclick="scrollToDiv()" data-translate="request_quote">Request a Quote</button>
       </div>
       <div class="product-card card3">
-        <h3>Truck Parts</h3>
-        <!-- <p>Reliable parts to maintain the efficiency of your bagger.</p> -->
-        <button class="cta-button" onclick="scrollToDiv()">Request a Quote</button>
+        <h3 data-translate="truck_parts">Truck Parts</h3>
+        <button class="cta-button" onclick="scrollToDiv()" data-translate="request_quote">Request a Quote</button>
       </div>
     </div>
   </section>
 
   <!-- Services -->
   <section id="services" class="services">
-    <h2>Our Services</h2>
+    <h2 data-translate="our_services_title">Our Services</h2>
     <div class="service-cards">
       <div class="product-card card4">
-        <h3>Lubricants</h3>
-        <!-- <p>High-quality parts for your excavators to ensure maximum performance.</p> -->
-        <button class="cta-button" onclick="scrollToDiv()">Request a Quote</button>
+        <h3 data-translate="lubricants">Lubricants</h3>
+        <button class="cta-button" onclick="scrollToDiv()" data-translate="request_quote">Request a Quote</button>
       </div>
       <div class="product-card card5">
-        <h3>Hydraulic hose</h3>
-        <!-- <p>Durable and reliable parts for your trucks and heavy machinery.</p> -->
-        <button class="cta-button" onclick="scrollToDiv()" >Request a Quote</button>
+        <h3 data-translate="hydraulic_hose">Hydraulic hose</h3>
+        <button class="cta-button" onclick="scrollToDiv()" data-translate="request_quote">Request a Quote</button>
       </div>
       <div class="product-card card6">
-        <h3>Steel Cable</h3>
-        <!-- <p>Reliable parts to maintain the efficiency of your bagger.</p> -->
-        <button class="cta-button" onclick="scrollToDiv()">Request a Quote</button>
+        <h3 data-translate="steel_cable">Steel Cable</h3>
+        <button class="cta-button" onclick="scrollToDiv()" data-translate="request_quote">Request a Quote</button>
       </div>
     </div>
   </section>
 
-    <!-- Why Choose Us Section -->
-    <!-- <section class="why-choose">
-        <h2>Why Choose Us</h2>
-        <p>Our expertise, reliability, and dedication to excellence make us the preferred choice for all your hydraulic part needs.</p>
-    </section> -->
-    
-    <!--Contact form-->
-  <section id="contact" class="contact" action="/send" method="POST">
+    <!-- Contact form-->
+  <section id="contact" class="contact">
     <div class="form">
-      <h2>Contact Us</h2>  
+      <h2 data-translate="contact_us">Contact Us</h2>  
       <form id="contactForm">
-        <input type="text" id="name" name="name" placeholder="Your Name (not required)"><br>
-        <input type="email" id="email" name="email" placeholder="Your Email" required><br>
-        <textarea name="message" placeholder="Your Message" required></textarea><br>
-        <button type="submit">Send Message</button>
+        <input type="text" id="name" name="name" placeholder="Your Name (not required)" data-translate="your_name"><br>
+        <input type="email" id="email" name="email" placeholder="Your Email" required data-translate="your_email"><br>
+        <textarea name="message" placeholder="Your Message" required data-translate="your_message"></textarea><br>
+        <button type="submit" data-translate="send_message">Send Message</button>
         <p id="submit"></p>
     </form>
     <p id="statusMessage"></p>
     </div>
     <div id="map">
-      <h2>Find Us</h2> 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5927.2985063334545!2d19.509721084130874!3d42.02925621266073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134e017c9951c35b%3A0x3c094f306292ceeb!2sPjes%C3%AB%20p%C3%ABr%20Fadroma%20dhe%20Ekskavator%20-%20Tuba%20industriale%2C%20Tuba%20Hidraulike!5e0!3m2!1sen!2s!4v1737139346041!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <h2 >Find Us</h2> 
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2492.135880560181!2d19.510180211765967!3d42.02890299459666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134e017c9951c35b%3A0x3c094f306292ceeb!2sPjes%C3%AB%20p%C3%ABr%20Fadroma%20dhe%20Ekskavator%20-%20Tuba%20industriale%2C%20Tuba%20Hidraulike!5e0!3m2!1sen!2s!4v1738346564492!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Hydraulic Parts Business. All rights reserved.</p>
+        <p data-translate="footer_text">&copy; 2025 Hydraulic Parts Business. All rights reserved.</p>
     </footer>
     <script src="./public/script.js" onerror="this.onerror=null;this.src='/script.js';"></script>
 </body>
