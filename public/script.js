@@ -13,7 +13,6 @@ function countUp(elementId, target, duration) {
       requestAnimationFrame(updateCounter);
     }
   }
-
   requestAnimationFrame(updateCounter);
 }
 
@@ -28,11 +27,9 @@ function setupObserverForCountUp(selector, target, duration) {
         observer.unobserve(entry.target); // Stop observing after the count starts
       }
     });
-  }, { threshold: 0.3 }); // Adjust the threshold as needed
-
+  }, { threshold: 0.3 }); 
   observer.observe(element);
 }
-
 // Dynamically setup counters with IntersectionObserver
 const stats = [
   { id: 'stat1', target: 20, duration: 1000 },
@@ -48,11 +45,9 @@ stats.forEach(({ id, target, duration }) => setupObserverForCountUp(`#${id}`, ta
 const navbar = document.getElementById("nav");
 const firstSection = document.getElementById('home');
 let threshold = firstSection.offsetHeight * 0.9;
-
 window.addEventListener('resize', () => {
   threshold = firstSection.offsetHeight * 0.9;
 });
-
 window.addEventListener('scroll', () => {
   if (window.scrollY > threshold) {
     navbar.classList.add('scrolled');
@@ -60,7 +55,6 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('scrolled');
   }
 });
-
 // Smooth scroll to contact section
 function scrollToDiv() {
   const targetDiv = document.getElementById('contact');
@@ -81,7 +75,6 @@ function setupObserver(selector, className = "visible", threshold = 0.3) {
 
   elements.forEach((element) => observer.observe(element));
 }
-
 setupObserver(".stat");
 setupObserver(".about-me");
 setupObserver(".products");
@@ -112,7 +105,7 @@ document.addEventListener('click', (e) => {
   const submitResult = document.getElementById("submit");
 
   form.addEventListener("submit", async (event) => {
-      event.preventDefault(); // Prevent default form submission
+      event.preventDefault();
 
       // Collect form data
       const formData = new FormData(form);
@@ -131,7 +124,7 @@ document.addEventListener('click', (e) => {
           if (response.ok) {
               submitResult.textContent = "Your message has been sent successfully!";
               submitResult.style.color = "green";
-              form.reset(); // Clear the form
+              form.reset();
           } else {
               submitResult.textContent = "Failed to send your message. Please try again.";
               submitResult.style.color = "red";
