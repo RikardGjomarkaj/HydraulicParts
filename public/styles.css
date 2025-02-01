@@ -82,6 +82,18 @@ header {
     height: auto;
     z-index: 1001;
 }
+#languageSelect{
+    border-radius: 10px;
+    padding: 4px;;
+}
+.option{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: white;
+    color: #000;
+    cursor: pointer;
+}
+
 /* Hamburger Menu Styles */
 .hamburger-menu {
     display: none;

@@ -4,7 +4,9 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "nodemailer": "^6.10.0"
+    "i18next": "^24.2.2",
+    "nodemailer": "^6.10.0",
+    "react-i18next": "^15.4.0"
   },
   "name": "hydraulic-parts-v1",
   "version": "1.0.0",
