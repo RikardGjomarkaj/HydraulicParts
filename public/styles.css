@@ -567,6 +567,7 @@ footer{
     margin-left: 50px;
 }
 
+
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
     /* General Adjustments */
@@ -641,7 +642,7 @@ header a{
     margin-right: 0;
     margin-left: 120px;
     border-radius: 40px;
-    height: 280px;
+    height: auto;
     padding-left: 10px;
   }
 .nav ul {
@@ -650,11 +651,17 @@ header a{
     flex-direction: column; 
 
   }
-  
+#languageSwitcher{
+    display: flex;
+    align-items: flex-start;
+}
+#languageSelect{
+    margin-left: 10%;
+}
 .nav ul li {
-    margin: 10px 0; 
-  }
-  
+    margin: 10px 0;
+    width: 120%;
+}
 .nav ul li a {
     text-decoration: none;
     font-size: 18px; 
