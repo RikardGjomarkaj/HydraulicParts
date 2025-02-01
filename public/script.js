@@ -145,7 +145,8 @@ const translations = {
     "products": "Products",
     "contact": "Contact",
     "quality_parts": "Quality Parts",
-    "trusted_service": "Trusted Service",
+    "trusted": "Trusted ",
+    "sevice": "Service",
     "engineering_dreams": "Powering Your Success with Premium Hydraulic Solutions.",
     "our_products": "Our Products",
     "years_in_business": "20",
@@ -183,7 +184,8 @@ const translations = {
     "products": "Produktet",
     "contact": "Kontakt",
     "quality_parts": "Pjesë Cilësore",
-    "trusted_service": "Shërbim i Besuar",
+    "trusted": "Sherbim",
+    "service": "i Besuar",
     "engineering_dreams": "Fuqizojmë suksesin tuaj me zgjidhje hydraulike premium.",
     "our_products": "Produktet Tona",
     "years_in_business": "20",
@@ -231,7 +233,7 @@ function switchLanguage(language) {
   elements.forEach((element) => {
     const key = element.getAttribute('data-translate');
     if (translations[language] && translations[language][key]) {
-      element.textContent = translations[language][key];
+      element.innerHTML = translations[language][key];
     }
   });
 }
