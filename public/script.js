@@ -146,7 +146,7 @@ const translations = {
     "contact": "Contact",
     "quality_parts": "Quality Parts",
     "trusted": "Trusted ",
-    "sevice": "Service",
+    "service": "Service",
     "engineering_dreams": "Powering Your Success with Premium Hydraulic Solutions.",
     "our_products": "Our Products",
     "years_in_business": "20",
@@ -179,7 +179,7 @@ const translations = {
     "footer_text": "&copy; 2025 Hydraulic Parts Business. All rights reserved."
   },
   "al": {
-    "home": "Kryefaqja",
+    "home": "Kreu",
     "about": "Rreth Nesh",
     "products": "Produktet",
     "contact": "Kontakt",
